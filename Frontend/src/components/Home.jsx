@@ -4,7 +4,7 @@ import Note from "./Note";
 
 function Home() {
     const host = process.env.REACT_APP_URL
-    console.log(host);
+   
     const [notes, setNotes] = useState([]);
   
     async function getNote() {
