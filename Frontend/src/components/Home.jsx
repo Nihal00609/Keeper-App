@@ -1,9 +1,10 @@
+require("dotenv").config();
 import React, { useEffect, useState } from "react";
 import CreateArea from "./CreateArea";
 import Note from "./Note";
 
 function Home() {
-    const host = "http://localhost:5000"
+    const host = process.env.HOST;
 
     const [notes, setNotes] = useState([]);
   
