@@ -16,6 +16,7 @@ function CreateArea(props) {
   function handleSubmit(event) {
     props.addNote(noteInput);
     setNoteInput({ title: "", content: "" });
+    setExpanded(false);
     event.preventDefault();
   }
   function expand() {
@@ -40,7 +41,7 @@ function CreateArea(props) {
           onClick={expand}
           name="content"
           placeholder="Take a note..."
-          rows={isExpanded ? "3" : "1"}
+          rows={isExpanded ? "4" : "1"}
           value={noteInput.content}
         />
         <Zoom in={isExpanded} >
